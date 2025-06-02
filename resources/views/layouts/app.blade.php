@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name', 'Laravel') }}</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js']) <!-- ou o que você estiver usando -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @yield('head')
 </head>
-<body class="bg-gray-100">
-    
-    @include('partials.navbar') <!-- AQUI você chama a navbar -->
+<body class="relative bg-[url('/images/fundo-painel-solar.jpg')] bg-cover bg-center min-h-screen backdrop-blur-xs">
 
-    <main class="py-8">
-        @yield('content') <!-- Aqui carrega o conteúdo das views -->
-    </main>
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Conteúdo do site acima do overlay -->
+    <div class="relative z-10">
+        @include('partials.navbar')
+
+        <main>
+            @yield('content')
+        </main>
+    </div>
 
 </body>
+
 </html>

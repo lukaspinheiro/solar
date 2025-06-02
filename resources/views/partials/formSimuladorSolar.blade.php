@@ -1,45 +1,50 @@
+<div class="w-full max-w-md sm:max-w-lg lg:max-w-3xl mx-auto bg-gray-800 bg-opacity-90 shadow-xl/30 rounded-2xl py-10 px-12">
 
-<div class="w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto bg-white shadow-lg rounded-2xl p-8 space-y-6">
-    <h2 class="text-2xl font-bold text-center text-indigo-600">Simulador de Energia Solar</h2>
+    <h2 class="text-center text-white text-xl font-bold mb-6">
+        SIMULADOR DE GASTOS COM <br> ENERGIA SOLAR
+    </h2>
 
-    <form action="" method="POST" class="space-y-4">
+    <form action="#" method="POST" class="space-y-12">
         @csrf
-        
-        <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="endereco">Endereço da Instalação</label>
-            <input type="text" id="endereco" name="endereco" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Digite o endereço" required>
-        </div>
+        <div class="space-y-8">
+            <div>
+                <label class="block text-base font-semibold text-white mb-1" for="cep">CEP</label>
+                <input
+                    type="text"
+                    id="cep"
+                    name="cep"
+                    placeholder="Digite seu CEP"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-400 bg-gray-900"
+                />
+            </div>
+    
+            <div>
+                <label class="block text-base font-semibold text-white mb-1" for="unidadeMedida">Unidade de Medida</label>
+                <select
+                    id="unidadeMedida"
+                    name="unidadeMedida"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-400 bg-gray-900">
+                    <option value="" disabled selected hidden>Selecione...</option>
+                    <option value="real">Real (R$)</option>
+                    <option value="kwh">kWh</option>
+                </select>
+            </div>
+    
+            <div>
+                <label class="block text-base font-semibold text-white mb-1" for="consumo">Consumo Mensal (kWh)</label>
+                <input
+                    type="number"
+                    id="consumo"
+                    name="consumo"
+                    placeholder="Ex.: 500"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-400 bg-gray-900"/>
+            </div>   
+        </div>    
 
-        <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="cep">CEP</label>
-            <input type="text" id="cep" name="cep" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Digite o CEP" required>
-        </div>
-
-        <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="tipo_consumo">Tipo de Consumo</label>
-            <select id="tipo_consumo" name="tipo_consumo" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" required>
-                <option value="">Selecione</option>
-                <option value="reais">Reais (R$)</option>
-                <option value="kwh">kWh</option>
-            </select>
-        </div>
-
-        <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="consumo_mensal">Consumo Mensal</label>
-            <input type="number" id="consumo_mensal" name="consumo_mensal" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Ex: 300" required>
-        </div>
-
-        <div class="text-center">
-            <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition duration-300">
-                Calcular Investimento Estimado
-            </button>
-        </div>
+        <button
+            type="submit"
+            class="w-full bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold py-2 rounded-lg transition">
+            CALCULAR
+        </button>
     </form>
-
-    <!-- <div class="mt-6 p-4 bg-gray-50 rounded-lg text-sm text-gray-700 space-y-1">
-        <p><span class="font-bold text-indigo-600">📍 Local:</span> Endereço e CEP inseridos</p>
-        <p><span class="font-bold text-yellow-600">⚡ Consumo estimado:</span> 1250 kWh/mês</p>
-        <p><span class="font-bold text-green-600">🔋 Potência estimada:</span> 10.42 kWp</p>
-        <p><span class="font-bold text-blue-600">💵 Investimento estimado:</span> R$ 52.083,33</p>
-    </div> -->
 </div>
