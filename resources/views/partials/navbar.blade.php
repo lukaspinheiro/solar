@@ -1,7 +1,7 @@
 <nav class="bg-gray-900 h-16 flex items-center px-20 relative">
 
     <div class="flex items-center gap-2">
-        <a href="">
+        <a href="{{ route('home') }}">
             <img src="{{ asset('images/logo-solarize.png') }}" alt="Logo Solarize" class="h-10">
         </a>
     </div>

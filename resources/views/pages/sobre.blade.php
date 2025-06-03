@@ -29,7 +29,7 @@
 
     <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-6 text-center">
     <!-- Card Lukas -->
-    <div class="bg-gray-700 p-6 rounded-xl hover:scale-105 transition shadow-sm">
+    <div class="bg-gray-700 p-6 rounded-xl hover:scale-105 transition inset-shadow-sm">
         <div class="flex justify-center mb-4">
             <img src="{{ asset('images/profile-lukas.jpeg') }}" alt="Foto de Lukas"
                 class="w-24 h-24 rounded-full border-4 border-yellow-400 object-cover">
@@ -51,7 +51,7 @@
     </div>
 
     <!-- Card Marya -->
-    <div class="bg-gray-700 p-6 rounded-xl hover:scale-105 transition shadow-sm">
+    <div class="bg-gray-700 p-6 rounded-xl hover:scale-105 transition inset-shadow-sm">
         <div class="flex justify-center mb-4">
             <img src="{{ asset('images/profile-marya.jpeg') }}" alt="Foto de Marya"
                 class="w-24 h-24 rounded-full border-4 border-yellow-400 object-cover">
@@ -69,7 +69,7 @@
     </div>
 
     <!-- Card Erick -->
-    <div class="bg-gray-700 p-6 rounded-xl hover:scale-105 transition shadow-sm">
+    <div class="bg-gray-700 p-6 rounded-xl hover:scale-105 transition inset-shadow-sm">
         <div class="flex justify-center mb-4">
             <img src="{{ asset('images/profile-erick.jpeg') }}" alt="Foto de Erick"
                 class="w-24 h-24 rounded-full border-4 border-yellow-400 object-cover">
